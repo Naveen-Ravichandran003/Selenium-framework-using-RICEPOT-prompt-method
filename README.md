@@ -88,9 +88,11 @@ The framework automatically generates comprehensive reports after every executio
 *   **Summary:** 2 Passed, 0 Failed
 
 ### HTML Report
-**👉 [VIEW RENDERED TEST REPORT](https://htmlpreview.github.io/?https://github.com/Naveen-Ravichandran003/Selenium-framework-using-RICEPOT-prompt-method/blob/main/reports/cucumber.html)**
+**👉 [VIEW LOCAL TEST REPORT (Browser)](file:///C:/Users/Welcome/OneDrive/Documents/Naveen%20Ravichandran%20-%20AI%20Testing/Project%204%20-%20Selenium%20Framework%20using%20RICEPOT%20Prompt%20method/target/cucumber-reports/cucumber.html)**  
+**👉 [VIEW RELATIVE TEST REPORT (IDE)](./target/cucumber-reports/cucumber.html)**
+
 *   Contains detailed steps, execution time, and status.
-*   *Note: GitHub does not render HTML files directly. Use the link above to view the formatted report.*
+*   *Note: To view on GitHub, download the file from the `reports/` folder and open in your browser.*
 *   **Embedded Screenshots** for validation points and failures.
 
 ### Latest Screenshots
