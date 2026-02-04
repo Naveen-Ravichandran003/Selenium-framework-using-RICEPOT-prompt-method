@@ -21,11 +21,11 @@ graph TD
     subgraph "Test Layer (BDD)"
         Cucumber -->|Steps| LoginSteps[LoginSteps.java]
         LoginSteps -->|Uses| LoginPage[LoginPage.java]
-        LoginSteps -->|Hooks| Hooks[@Before / @After]
+        LoginSteps -->|Hooks| Hooks["@Before / @After"]
     end
     
     subgraph "Core Layer (Selenium)"
-        LoginPage -->|Locates| Elements[@FindBy ID]
+        LoginPage -->|Locates| Elements["@FindBy ID"]
         LoginPage -->|Actions| WebDriver[Selenium WebDriver]
         WebDriver -->|Interacts| Browser(Chrome Browser)
     end
@@ -47,13 +47,13 @@ This framework is a direct result of advanced **Prompt Engineering** using the *
 
 | Component | Concept | Application in this Project |
 | :--- | :--- | :--- |
-| **R - Role** | **Persona Definition** | The AI was instructed to act as a **Senior QA Automation Architect** with expertise in building scalable, enterprise frameworks. This ensured the code wasn't just "functional" but successfully adhered to design patterns like POM and SOLID principles. |
-| **I - Instructions** | **Explicit Directives** | We provided strict technical rules: use **ID locators only** (for stability), use **PageFactory**, and implement **explicit waits** (`WebDriverWait`) instead of unreliable Thread.sleeps or implicit waits. |
-| **C - Context** | **Domain Knowledge** | The context was set to **Salesforce Login Automation**, a complex environment often dealing with dynamic elements and A/B testing. The framework was built to handle these specific challenges. |
-| **E - Example** | **Few-Shot Learning** | We referenced standard industry coding styles, requiring the code to look like it was written by a human expert—clean indentation, proper variable naming, and comprehensive Javadoc/logging. |
-| **P - Parameters** | **Constraints** | We set boundaries: "No flakey tests," "Must support parallel execution," and "Must run on Windows/Chrome." We also mandated the removal of all hardcoded waits (except for visual debug purposes). |
-| **O - Output** | **Format & Deliverables** | The output was strictly defined: A Maven project structure, Feature files in Gherkin, distinct Page Object classes, and a robust TestNG runner. |
-| **T - Tone** | **Communication Style** | The interaction tone was set to **Professional, Technical, and Concise**. The AI focused on delivering code and architectural explanations rather than conversational filler. |
+| **R - Role** | **Senior QA Automation Architect** |  15+ years experience, specializing in enterprise-scale Selenium/Java/Cucumber frameworks. Expertise in CRM (Salesforce). Focus on stability, scalability, CI/CD readiness, and near-zero technical debt. |
+| **I - Instructions** | **Framework Specifications** | **Stack:** Java, Selenium, Cucumber (BDD), TestNG, Maven, POM w/ PageFactory.<br>**Rules:**<br>• Use **ID locators ONLY** (No XPath/CSS).<br>• Use **WebDriverWait ONLY** (No Thread.sleep/Implicit waits).<br>• **Screenshots:** Mandatory for both success and failure.<br>• **Reporting:** Auto-generated HTML reports.<br>• **Exception Handling:** Robust try-catch blocks. |
+| **C - Context** | **Domain Specifics** | **Target:** Salesforce Login Page (highly dynamic, A/B testing environment).<br>**Components:** Username, Password, Login Button, 'Remember Me', Error Validation.<br>**Requirement:** Framework must be resilient and stable despite UI changes. |
+| **E - Example** | **Code Standards** | provided specific examples of strict `@FindBy(id = "...")` usage to enforce the locator strategy and prevent deviations. |
+| **P - Parameters** | **Quality Gates** | • Production-grade architecture.<br>• Zero bad practices.<br>• No redundant or commented code.<br>• Defensive programming mindset.<br>• Pin-point accuracy in validation. |
+| **O - Output** | **Deliverables** | **Runnable Code Only** (No explanations).<br>1. Page Object Class<br>2. Cucumber Feature File<br>3. Step Definition Class<br>4. TestNG Runner<br>5. Maven `pom.xml` with reporting config. |
+| **T - Tone** | **Interaction Style** | Highly technical, precise, enterprise-grade, code-only output, Architect-level quality. |
 
 ### Why use RICEPOT?
 Using this method prevents "hallucinations" and generic code generation. It forces the AI to check against a mental checklist of constraints before writing a single line of code, resulting in a framework that is:
@@ -81,18 +81,23 @@ Using this method prevents "hallucinations" and generic code generation. It forc
 
 The framework automatically generates comprehensive reports after every execution.
 
+### Latest Execution Summary
+*   **Date:** 2026-02-04
+*   **Total Tests:** 2
+*   **Status:** ✅ **PASS** (100%)
+*   **Summary:** 2 Passed, 0 Failed
+
 ### HTML Report
 **👉 [CLICK HERE TO VIEW TEST REPORT](./target/cucumber-reports/cucumber.html)**
 *   Contains detailed steps, execution time, and status.
 *   **Embedded Screenshots** for validation points and failures.
 
-### Latest Execution Evidence
-*(Screenshots are embedded in the HTML report, but also extracted to `target/screenshots/`)*
+### Latest Screenshots
+*(Extracted from the latest run)*
 
-| Scenario | Screenshot Preview |
-| :--- | :--- |
-| **Login Page Elements** | ![Login Verify](target/screenshots/screenshot_1.png) |
-| **Invalid Login Error** | ![Invalid Login](target/screenshots/screenshot_2.png) |
+| Login Verify | Invalid Login |
+| :---: | :---: |
+| ![Login Verify](./screenshots/screenshot_1.png) | ![Invalid Login](./screenshots/screenshot_2.png) |
 
 ---
 
@@ -124,10 +129,10 @@ Project Root
 │   ├── test/java/.../steps/       # Step Definitions (LoginSteps.java)
 │   ├── test/java/.../runners/     # Test Runners (TestRunner.java, Runner.java)
 │   └── test/resources/features/   # Cucumber Feature Files (.feature)
-├── target/
-│   ├── cucumber-reports/          # HTML & JSON Reports
-│   └── screenshots/               # Extracted Failure/Success Screenshots
+├── screenshots/                   # Evidence Screenshots (Tracked in Git)
+├── target/                        # Build artifacts & Reports (Ignored/Generated)
 ├── pom.xml                        # Maven Dependencies
 ├── testng.xml                     # TestNG Reporting Config
+├── .gitignore                     # Git exclusion rules
 └── README.md                      # Documentation
 ```
