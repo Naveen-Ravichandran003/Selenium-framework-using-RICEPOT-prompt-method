@@ -31,7 +31,7 @@ graph TD
     end
     
     subgraph "Reporting & Evidence"
-        Hooks -->|Captures| Screenshots[Screenshots (.png)]
+        Hooks -->|Captures| Screenshots[Screenshots PNG]
         Cucumber -->|Generates| HTMLReport[Cucumber HTML Report]
         Cucumber -->|Generates| JSONReport[Cucumber JSON Report]
     end
