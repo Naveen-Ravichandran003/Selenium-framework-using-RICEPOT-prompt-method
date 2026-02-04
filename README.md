@@ -1,16 +1,22 @@
-# Selenium Automation Framework - RICEPOT Prompt Method
-
-[![Test Execution Status](https://img.shields.io/badge/Test%20Status-PASS-brightgreen)](./target/cucumber-reports/cucumber.html)
-[![Selenium Version](https://img.shields.io/badge/Selenium-4.28.1-blue)](pom.xml)
-[![Java Version](https://img.shields.io/badge/Java-21-orange)](pom.xml)
-
-## 📌 Project Overview
-
-This project implements an enterprise-grade **Selenium Automation Framework** for Salesforce, designed using the advanced **RICEPOT Prompt Method**. It features a robust Page Object Model (POM) architecture integrated with **Cucumber BDD** and **TestNG**, ensuring scalability, maintainability, and high-quality reporting.
+# 🚀 Salesforce Automation Framework
+> **Enterprise-Grade Selenium BDD Framework designed using the RICEPOT Prompt Method.**
 
 ---
 
-## 🏗️ Architecture Diagram
+## 📌 Project Overview
+
+This project implements a robust **Selenium Automation Framework** for Salesforce login validation. It leverages the **Page Object Model (POM)** architecture integrated with **Cucumber BDD** and **TestNG**, ensuring scalability, maintainability, and high-quality reporting.
+
+### ✨ Key Features
+*   **BDD Excellence:** Gherkin-based scenarios for business readability.
+*   **POM Design:** Modular Page Objects using Selenium `PageFactory`.
+*   **ID-Only Locators:** Enhanced stability by strictly using unique ID attributes.
+*   **Smart Waits:** Zero `Thread.sleep()`; powered by `WebDriverWait`.
+*   **Auto-Reporting:** Rich HTML reports with embedded screenshots.
+
+---
+
+## 🏗️ Architecture & Workflow
 
 ```mermaid
 graph TD
@@ -39,114 +45,84 @@ graph TD
 
 ---
 
-## 🚀 The RICEPOT Method Implementation
+## 🏛️ The RICEPOT Method Implementation
 
-This framework is a direct result of advanced **Prompt Engineering** using the **RICEPOT** framework. By carefully structuring the initial request to the AI, we ensured the generated code was production-ready from the first iteration.
+This framework is a direct result of advanced **Prompt Engineering**. By applying the **RICEPOT** framework, we ensured production-ready code from the first iteration.
 
-### Breakdown of the Prompt Strategy:
-
-| Component | Concept | Application in this Project |
+| Component | Definition | Application |
 | :--- | :--- | :--- |
-| **R - Role** | **Senior QA Automation Architect** | Act as 15+ years experience, specializing in enterprise-scale Selenium/Java/Cucumber frameworks. Expertise in CRM (Salesforce). Focus on stability, scalability, CI/CD readiness, and near-zero technical debt. |
-| **I - Instructions** | **Framework Specifications** | **Stack:** Java, Selenium, Cucumber (BDD), TestNG, Maven, POM w/ PageFactory.<br>**Rules:**<br>• Use **ID locators ONLY** (No XPath/CSS).<br>• Use **WebDriverWait ONLY** (No Thread.sleep/Implicit waits).<br>• **Screenshots:** Mandatory for both success and failure.<br>• **Reporting:** Auto-generated HTML reports.<br>• **Exception Handling:** Robust try-catch blocks. |
-| **C - Context** | **Domain Specifics** | **Target:** Salesforce Login Page (highly dynamic, A/B testing environment).<br>**Components:** Username, Password, Login Button, 'Remember Me', Error Validation.<br>**Requirement:** Framework must be resilient and stable despite UI changes. |
-| **E - Example** | **Code Standards** | provided specific examples of strict `@FindBy(id = "...")` usage to enforce the locator strategy and prevent deviations. |
-| **P - Parameters** | **Quality Gates** | • Production-grade architecture.<br>• Zero bad practices.<br>• No redundant or commented code.<br>• Defensive programming mindset.<br>• Pin-point accuracy in validation. |
-| **O - Output** | **Deliverables** | **Runnable Code Only** (No explanations).<br>1. Page Object Class<br>2. Cucumber Feature File<br>3. Step Definition Class<br>4. TestNG Runner<br>5. Maven `pom.xml` with reporting config. |
-| **T - Tone** | **Interaction Style** | Highly technical, precise, enterprise-grade, code-only output, Architect-level quality. |
+| **R - Role** | **Senior Architect** | 15+ years exp. focusing on stability and zero technical debt. |
+| **I - Instructions**| **Specifications** | Java 21, Selenium 4, Cucumber, TestNG, Maven, PageFactory. |
+| **C - Context** | **Domain Specifics** | Salesforce Login (Dynamic elements, A/B testing environment). |
+| **E - Example** | **Code Standards** | Strict `@FindBy(id = "...")` enforcement. |
+| **P - Parameters** | **Quality Gates** | Zero bad practices, robust exception handling, smart waits. |
+| **O - Output** | **Deliverables** | Maven structure, Feature files, Step Defs, Runner, POM. |
+| **T - Tone** | **Interaction Style**| Highly technical, precise, and professional. |
 
-### Why use RICEPOT?
-RICEPOT method helps the AI clearly understand what needs to be built and how it should be built.
-It prevents hallucinations and avoids generating generic or incorrect code.
-
-By using RICEPOT, the AI verifies all rules and constraints before writing any code, ensuring the output follows real project and enterprise standards.
-
-This results in a framework that is:
-
-More stable
-Because it enforces ID-based locators and proper waiting strategies instead of unreliable shortcuts.
-
-Easier to maintain
-Because it strictly follows the Page Object Model (POM) structure.
-
-More reliable
-Because the AI is guided to think and act like a Senior Automation Architect, not a beginner.
 ---
 
 ## 🧪 Test Scenarios
 
-### 1. Verify Login Page Elements
-*   **Goal:** Ensure critical UI components are visible upon load.
-*   **Validation:** Username field, Password field, Login button.
-*   **Evidence:** Explicit screenshot taken.
+### 📍 1. Verify Login Page Elements
+*   **Objective:** Ensure critical UI components (Username, Password, Login) are visible.
+*   **Outcome:** 🟢 PASS | **Evidence:** Screenshot taken.
 
-### 2. Invalid Login Attempt
-*   **Goal:** Verify error handling for incorrect credentials.
-*   **Validation:** "Error: Please check your username..." message.
-*   **Evidence:** Screenshot taken on success or failure.
+### 📍 2. Invalid Login Attempt
+*   **Objective:** Verify error messaging for incorrect credentials.
+*   **Outcome:** 🟢 PASS | **Evidence:** Error validation screenshot.
 
 ---
 
-## 📊 Test Reports & Screenshots
+## 📊 Test Execution Evidence
 
-The framework automatically generates comprehensive reports after every execution.
+### Execution Summary
+| Date | Total Tests | Status | Success Rate |
+| :--- | :--- | :--- | :--- |
+| 2026-02-04 | 2 | ✅ **PASS** | 100% |
 
-### Latest Execution Summary
-*   **Date:** 2026-02-04
-*   **Total Tests:** 2
-*   **Status:** ✅ **PASS** (100%)
-*   **Summary:** 2 Passed, 0 Failed
+### HTML Report Access
+The framework generates a detailed HTML report for every run:
+*   [**� Open Local Test Report (Browser)**](file:///C:/Users/Welcome/OneDrive/Documents/Naveen%20Ravichandran%20-%20AI%20Testing/Project%204%20-%20Selenium%20Framework%20using%20RICEPOT%20Prompt%20method/target/cucumber-reports/cucumber.html)
+*   [**� View Relative Report (IDE)**](./target/cucumber-reports/cucumber.html)
 
-### HTML Report
-**👉 [VIEW LOCAL TEST REPORT (Browser)](file:///C:/Users/Welcome/OneDrive/Documents/Naveen%20Ravichandran%20-%20AI%20Testing/Project%204%20-%20Selenium%20Framework%20using%20RICEPOT%20Prompt%20method/target/cucumber-reports/cucumber.html)**  
-**👉 [VIEW RELATIVE TEST REPORT (IDE)](./target/cucumber-reports/cucumber.html)**
-
-*   Contains detailed steps, execution time, and status.
-*   *Note: To view on GitHub, download the file from the `reports/` folder and open in your browser.*
-*   **Embedded Screenshots** for validation points and failures.
-
-### Latest Screenshots
-*(Extracted from the latest run)*
-
-| Login Verify | Invalid Login |
+### Screenshots
+| Login Elements Verification | Invalid Login Error Validation |
 | :---: | :---: |
 | ![Login Verify](./screenshots/screenshot_1.png) | ![Invalid Login](./screenshots/screenshot_2.png) |
+
+---
+
+## 📁 Project Structure
+
+```text
+Project Root
+├── src/
+│   ├── main/java/.../pages/       # Page Objects (LoginPage.java)
+│   ├── test/java/.../steps/       # Step Definitions (LoginSteps.java)
+│   ├── test/java/.../runners/     # Test Runners (Runner.java)
+│   └── test/resources/features/   # Gherkin Features (.feature)
+├── reports/                       # Tracked HTML Reports
+├── screenshots/                   # Tracked Execution Screenshots
+├── target/                        # Build Artifacts (Ignored)
+├── pom.xml                        # Maven Dependencies
+├── testng.xml                     # TestNG Config
+└── README.md                      # Documentation
+```
 
 ---
 
 ## 🛠️ Setup & Execution
 
 ### Prerequisites
-*   Java JDK 21+
-*   Maven
-*   Google Chrome
+*   **Java:** JDK 21+
+*   **Build Tool:** Maven
+*   **Browser:** Google Chrome
 
-### Running Tests (Command Line)
+### Commands
 ```bash
+# Clean and run all tests
 mvn clean test
 ```
 
-### Running Tests (IDE / Manual)
-1.  Open `src/test/java/com/salesforce/runners/Runner.java`
-2.  Run as Java Application.
-3.  **Report will auto-open** in your default browser upon completion.
-
 ---
-
-## 📁 Project Structure
-
-```
-Project Root
-├── src/
-│   ├── main/java/.../pages/       # Page Object Classes (LoginPage.java)
-│   ├── test/java/.../steps/       # Step Definitions (LoginSteps.java)
-│   ├── test/java/.../runners/     # Test Runners (TestRunner.java, Runner.java)
-│   └── test/resources/features/   # Cucumber Feature Files (.feature)
-├── reports/                       # HTML Execution Reports (Tracked in Git)
-├── screenshots/                   # Evidence Screenshots (Tracked in Git)
-├── target/                        # Build artifacts & Reports (Ignored/Generated)
-├── pom.xml                        # Maven Dependencies
-├── testng.xml                     # TestNG Reporting Config
-├── .gitignore                     # Git exclusion rules
-└── README.md                      # Documentation
-```
+<p align="center">Made with ❤️ by Naveen Ravichandran</p>
