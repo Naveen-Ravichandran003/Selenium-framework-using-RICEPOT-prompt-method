@@ -88,7 +88,7 @@ The framework automatically generates comprehensive reports after every executio
 *   **Summary:** 2 Passed, 0 Failed
 
 ### HTML Report
-**👉 [CLICK HERE TO VIEW TEST REPORT](./target/cucumber-reports/cucumber.html)**
+**👉 [VIEW TEST REPORT](./reports/cucumber.html)**
 *   Contains detailed steps, execution time, and status.
 *   **Embedded Screenshots** for validation points and failures.
 
@@ -129,6 +129,7 @@ Project Root
 │   ├── test/java/.../steps/       # Step Definitions (LoginSteps.java)
 │   ├── test/java/.../runners/     # Test Runners (TestRunner.java, Runner.java)
 │   └── test/resources/features/   # Cucumber Feature Files (.feature)
+├── reports/                       # HTML Execution Reports (Tracked in Git)
 ├── screenshots/                   # Evidence Screenshots (Tracked in Git)
 ├── target/                        # Build artifacts & Reports (Ignored/Generated)
 ├── pom.xml                        # Maven Dependencies
