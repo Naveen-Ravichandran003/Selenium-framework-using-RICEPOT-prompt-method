@@ -1,4 +1,4 @@
-# Salesforce Automation Framework - RICEPOT Prompt Method
+# Selenium Automation Framework - RICEPOT Prompt Method
 
 [![Test Execution Status](https://img.shields.io/badge/Test%20Status-PASS-brightgreen)](./target/cucumber-reports/cucumber.html)
 [![Selenium Version](https://img.shields.io/badge/Selenium-4.28.1-blue)](pom.xml)
@@ -47,7 +47,7 @@ This framework is a direct result of advanced **Prompt Engineering** using the *
 
 | Component | Concept | Application in this Project |
 | :--- | :--- | :--- |
-| **R - Role** | **Senior QA Automation Architect** |  15+ years experience, specializing in enterprise-scale Selenium/Java/Cucumber frameworks. Expertise in CRM (Salesforce). Focus on stability, scalability, CI/CD readiness, and near-zero technical debt. |
+| **R - Role** | **Senior QA Automation Architect** | Act as 15+ years experience, specializing in enterprise-scale Selenium/Java/Cucumber frameworks. Expertise in CRM (Salesforce). Focus on stability, scalability, CI/CD readiness, and near-zero technical debt. |
 | **I - Instructions** | **Framework Specifications** | **Stack:** Java, Selenium, Cucumber (BDD), TestNG, Maven, POM w/ PageFactory.<br>**Rules:**<br>• Use **ID locators ONLY** (No XPath/CSS).<br>• Use **WebDriverWait ONLY** (No Thread.sleep/Implicit waits).<br>• **Screenshots:** Mandatory for both success and failure.<br>• **Reporting:** Auto-generated HTML reports.<br>• **Exception Handling:** Robust try-catch blocks. |
 | **C - Context** | **Domain Specifics** | **Target:** Salesforce Login Page (highly dynamic, A/B testing environment).<br>**Components:** Username, Password, Login Button, 'Remember Me', Error Validation.<br>**Requirement:** Framework must be resilient and stable despite UI changes. |
 | **E - Example** | **Code Standards** | provided specific examples of strict `@FindBy(id = "...")` usage to enforce the locator strategy and prevent deviations. |
@@ -56,11 +56,21 @@ This framework is a direct result of advanced **Prompt Engineering** using the *
 | **T - Tone** | **Interaction Style** | Highly technical, precise, enterprise-grade, code-only output, Architect-level quality. |
 
 ### Why use RICEPOT?
-Using this method prevents "hallucinations" and generic code generation. It forces the AI to check against a mental checklist of constraints before writing a single line of code, resulting in a framework that is:
-*   **More Stable:** By enforcing ID locators and explicit waits.
-*   **More Maintainable:** By enforcing POM architecture.
-*   **More Reliable:** By setting the "Senior Architect" persona.
+RICEPOT method helps the AI clearly understand what needs to be built and how it should be built.
+It prevents hallucinations and avoids generating generic or incorrect code.
 
+By using RICEPOT, the AI verifies all rules and constraints before writing any code, ensuring the output follows real project and enterprise standards.
+
+This results in a framework that is:
+
+More stable
+Because it enforces ID-based locators and proper waiting strategies instead of unreliable shortcuts.
+
+Easier to maintain
+Because it strictly follows the Page Object Model (POM) structure.
+
+More reliable
+Because the AI is guided to think and act like a Senior Automation Architect, not a beginner.
 ---
 
 ## 🧪 Test Scenarios
