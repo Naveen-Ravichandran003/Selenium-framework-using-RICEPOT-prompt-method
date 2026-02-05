@@ -114,9 +114,9 @@ The following table shows how the **RICEPOT** prompt was strategically applied t
 
 ### HTML Report Access
 The framework generates a detailed HTML report for every run:
-*   [**📊 View Execution Report**](./target/cucumber-reports/cucumber.html)
+*   [**📊 View Execution Report**](./reports/cucumber.html)
 
-> **💡 Note:** If the relative link doesn't open directly in your IDE, right-click the file `target/cucumber-reports/cucumber.html` in your project explorer and select **"Open in Browser"**.
+> **💡 Note:** If the relative link doesn't open directly in your IDE, right-click the file `reports/cucumber.html` in your project explorer and select **"Open in Browser"**.
 
 ### Screenshots
 | Login Elements Verification | Invalid Login Error Validation |
