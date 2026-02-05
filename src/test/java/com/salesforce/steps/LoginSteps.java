@@ -24,8 +24,12 @@ public class LoginSteps {
     public void setup(Scenario scenario) {
         this.scenario = scenario;
         try {
-            driver = new ChromeDriver();
-            driver.manage().window().maximize();
+            org.openqa.selenium.chrome.ChromeOptions options = new org.openqa.selenium.chrome.ChromeOptions();
+            options.addArguments("--disable-notifications");
+            options.addArguments("--start-maximized");
+            // Disable logging to speed up execution
+            System.setProperty("webdriver.chrome.silentOutput", "true");
+            driver = new ChromeDriver(options);
             loginPage = new LoginPage(driver);
         } catch (Exception e) {
             throw new RuntimeException("Driver initialization failed: " + e.getMessage());
@@ -34,14 +38,8 @@ public class LoginSteps {
 
     @AfterStep
     public void afterStep(Scenario scenario) {
-        if (driver != null) {
-            try {
-                // Hard wait for visual verification as requested
-                Thread.sleep(2000);
-            } catch (Exception e) {
-                // Ignore to ensure test flow continues
-            }
-        }
+        // Removed hard wait to improve execution speed. 
+        // Screenshots are still captured in hooks or steps as defined.
     }
 
     @After

@@ -47,49 +47,65 @@ graph TD
 
 ## 🏛️ The RICEPOT Method – Implementation Overview
 
-This framework is built using advanced prompt engineering with the **RICEPOT** method.
+This framework is built using advanced prompt engineering based on the **RICEPOT** methodology.
 
 Unlike generic prompts that require multiple retries and corrections, RICEPOT enables the AI to produce a complete, enterprise-grade automation framework in a single iteration.
 
-By clearly defining the role, rules, context, and expected output upfront, RICEPOT removes ambiguity and prevents hallucinations. This allows the AI to get it right the first time, without repeated back-and-forth changes.
+The result is not a collection of disconnected scripts, but a cohesive, production-ready automation system designed to meet enterprise engineering standards from the first generation.
 
-### ❓ What is RICEPOT?
-RICEPOT is a structured way of writing prompts for complex technical work. It is designed for important tasks like building automation frameworks or production-level code.
+### ❓ What Is RICEPOT?
 
-RICEPOT makes sure that everything needed for a software project is clearly defined upfront — such as the role, rules, context, examples, and expected output — so the AI knows exactly what to deliver.
+RICEPOT is a structured prompt-design methodology created for complex, high-impact technical work, including enterprise automation frameworks and production-level software systems.
 
-### 🎯 Why use RICEPOT?
-RICEPOT helps the AI clearly understand **what** needs to be built and **how** it should be built. It prevents hallucinations and avoids generating generic or incorrect code.
+It provides a disciplined way to guide AI behavior so that the output reflects real-world engineering practices, not experimental or generic solutions.
 
-By using RICEPOT, the AI verifies all rules and constraints before writing any code, ensuring the output follows real project and enterprise standards. This results in a framework that is:
+### 🎯 Why Use RICEPOT?
 
-*   **More Stable:** Because it enforces ID-based locators and proper waiting strategies instead of unreliable shortcuts.
-*   **Easier to Maintain:** Because it strictly follows the Page Object Model (POM) structure and modular design.
-*   **More Reliable:** Because the AI is guided to think and act like a **Senior Automation Architect**, ensuring industrial-grade quality from the first iteration.
+RICEPOT helps the AI clearly understand what needs to be built and how it should be built. It prevents hallucinations and avoids generating generic or incorrect code.
 
-### 🧩 Breakdown of our Prompt
-The following table shows how the **RICEPOT** prompt was strategically applied to ensure this framework meets enterprise standards in a single-shot generation:
+By using RICEPOT, the AI verifies all rules and constraints before writing any code, ensuring the output follows real project and enterprise standards.
 
-| Component | Definition | Key Objective | Application in this Project |
+Frameworks generated using RICEPOT are:
+
+*   **✅ More Stable**
+    *   Enforce ID-based element identification
+    *   Rely on explicit wait strategies rather than timing shortcuts
+*   **✅ Easier to Maintain**
+    *   Follow strict Page Object Model (POM) principles
+    *   Use modular, decoupled components suitable for long-term growth
+*   **✅ More Reliable**
+    *   Designed with defensive execution patterns
+    *   Built to enterprise standards from the first iteration
+
+### 🧩 RICEPOT Prompt Breakdown
+
+The table below illustrates how each RICEPOT component contributes to a single-pass, enterprise-grade framework:
+
+| Component | Definition | Key Objective | Application in This Project |
 | :--- | :--- | :--- | :--- |
-| **R - Role** | **Persona Adoption** | Establishes the expertise level and perspective. | **Senior QA Architect (15+ yrs)** specialized in CRM & Salesforce automation. |
-| **I - Instructions**| **Core Directives** | Defines the "what" and "how" (tech stack, logic). | Framework using **Java, Cucumber, TestNG, Maven, & PageFactory**. |
-| **C - Context** | **Environment Scope** | Provides background for relevant decision-making. | Target: **Salesforce CRM Login** with A/B testing resilience and element validation. |
-| **E - Example** | **Pattern Reference**| Minimizes stylistic variations and ensures consistency. | Strict **ID-only locator strategy** via `@FindBy(id = "...")` examples. |
-| **P - Parameters** | **Constraints & Rules**| Sets the quality gates and boundaries for the AI. | **Zero bad practices**: No `Thread.sleep()`, no commented code, defensive execution. |
-| **O - Output** | **Structural Format** | Defines the exact deliverables and formatting. | **Code-only delivery**: Page Objects, Feature files, Step Defs, Runner, and `pom.xml`. |
-| **T - Tone** | **Communication Style**| Matches the communication style to expectations. | **Architect-level precision**: Highly technical, concise, and production-ready. |
+| **R – Role** | Persona Adoption | Establishes expertise and authority | Senior QA Architect (15+ years) specializing in CRM & Salesforce automation |
+| **I – Instructions** | Core Directives | Defines tools and implementation strategy | Java, Cucumber, TestNG, Maven, PageFactory |
+| **C – Context** | Environment Scope | Guides architectural decisions | Salesforce CRM login with A/B testing resilience |
+| **E – Example** | Pattern Reference | Enforces consistency | ID-only locator examples using `@FindBy(id = "...")` |
+| **P – Parameters** | Constraints & Rules | Establishes quality gates | No `Thread.sleep()`, no commented code, defensive execution |
+| **O – Output** | Structural Format | Controls deliverables | Page Objects, Feature Files, Step Definitions, Runner, `pom.xml` |
+| **T – Tone** | Communication Style | Aligns output expectations | Technical, concise, production-ready |
 
-> **Pro Tip:** RICEPOT ensures that the AI doesn't just "give a script," but builds a **complete system** that respects engineering constraints like locator stability and wait strategies.
+### 💡 Pro Tip
+
+RICEPOT ensures the AI doesn’t just generate code—it engineers a system.
+
+It enforces decisions that matter in real projects, such as locator stability, execution reliability, framework scalability, and CI/CD compatibility.
 
 ### ⚔️ Generic Prompt vs. RICEPOT Prompt
-| Feature | Generic Prompt | RICEPOT Prompt (This Project) |
+
+| Feature | Generic Prompt | RICEPOT Prompt |
 | :--- | :--- | :--- |
-| **Output Style** | Snippet-based / Single file | Full Enterprise Framework (POM, BDD) |
-| **Wait Strategy** | Often uses `Thread.sleep()` | Smart `WebDriverWait` (Explicit Only) |
-| **Locator Quality**| Mix of XPath/CSS (Brittle) | **Strictly ID-based** (High Stability) |
-| **Code Review** | High technical debt | Production-ready / Zero technical debt |
-| **Scalability** | Hard to maintain | Modular, decoupled, and CI/CD ready |
+| **Output Style** | Snippet-based or partial | Full enterprise framework (POM + BDD) |
+| **Wait Strategy** | `Thread.sleep()` | Explicit waits only |
+| **Locator Quality** | XPath/CSS (brittle) | ID-only (high stability) |
+| **Code Quality** | High technical debt | Production-ready |
+| **Scalability** | Difficult to evolve | Modular and CI/CD ready |
 
 ---
 
@@ -115,10 +131,8 @@ The following table shows how the **RICEPOT** prompt was strategically applied t
 ### HTML Report Access
 The framework generates a detailed HTML report for every run:
 
-*   [**💻 Local View: 📊 Click to Open Local Report**](file:///C:/Users/Welcome/OneDrive/Documents/Naveen%20Ravichandran%20-%20AI%20Testing/Project%204%20-%20Selenium%20Framework%20using%20RICEPOT%20Prompt%20method/target/cucumber-reports/cucumber.html)
-*   [**🌐 Online View: 📊 Live Report Preview (GitHub)**](https://raw.githack.com/Naveen-Ravichandran003/Selenium-framework-using-RICEPOT-prompt-method/main/reports/cucumber.html)
+*   [**🌐 Online View: 📊 Open Latest Run Report**](file:///C:/Users/Welcome/OneDrive/Documents/Naveen%20Ravichandran%20-%20AI%20Testing/Project%204%20-%20Selenium%20Framework%20using%20RICEPOT%20Prompt%20method/target/cucumber-reports/cucumber.html)
 
-> **💡 Note:** The **Local View** link is for opening the report directly from your computer (works in most IDEs). The **Online View** uses GitHack to render the report directly on GitHub. If you cannot click the links, right-click the file `target/cucumber-reports/cucumber.html` and select **"Open in Browser"**.
 
 ### Screenshots
 | Login Elements Verification | Invalid Login Error Validation |
@@ -158,6 +172,11 @@ Project Root
 # Clean and run all tests
 mvn clean test
 ```
+
+---
+
+## 📜 License
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 <p align="center">Made with ❤️ by Naveen Ravichandran</p>
