@@ -131,7 +131,10 @@ It enforces decisions that matter in real projects, such as locator stability, e
 ### HTML Report Access
 The framework generates a detailed HTML report for every run:
 
-*   [**🌐 Online View: 📊 Open Latest Run Report**](file:///C:/Users/Welcome/OneDrive/Documents/Naveen%20Ravichandran%20-%20AI%20Testing/Project%204%20-%20Selenium%20Framework%20using%20RICEPOT%20Prompt%20method/target/cucumber-reports/cucumber.html)
+*   [**💻 Local View: 📊 Open Latest Run Report**](file:///C:/Users/Welcome/OneDrive/Documents/Naveen%20Ravichandran%20-%20AI%20Testing/Project%204%20-%20Selenium%20Framework%20using%20RICEPOT%20Prompt%20method/target/cucumber-reports/cucumber.html)
+*   [**🌐 Online View: 📊 Live Report Preview**](https://raw.githack.com/Naveen-Ravichandran003/Selenium-framework-using-RICEPOT-prompt-method/main/reports/cucumber.html)
+
+> **💡 Note:** Links starting with `file:///` only work when viewed locally on your computer. To view the report directly on GitHub, use the **Online View (Live Report Preview)** link above.
 
 
 ### Screenshots
