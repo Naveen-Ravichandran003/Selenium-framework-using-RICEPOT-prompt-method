@@ -114,10 +114,10 @@ The following table shows how the **RICEPOT** prompt was strategically applied t
 
 ### HTML Report Access
 The framework generates a detailed HTML report for every run:
-*   **💻 Local View:** [**📊 View Execution Report**](./reports/cucumber.html) (Best for local IDE use)
-*   **🌐 Online View:** [**Live Report Preview**](https://raw.githack.com/Naveen-Ravichandran003/Selenium-framework-using-RICEPOT-prompt-method/main/reports/cucumber.html) (View directly on GitHub)
+*   **💻 Local View:** [**📊 Open Local Report**](file:///C:/Users/Welcome/OneDrive/Documents/Naveen%20Ravichandran%20-%20AI%20Testing/Project%204%20-%20Selenium%20Framework%20using%20RICEPOT%20Prompt%20method/target/cucumber-reports/cucumber.html)
+*   **🌐 Online View:** [**📊 Open Report**](file:///C:/Users/Welcome/OneDrive/Documents/Naveen%20Ravichandran%20-%20AI%20Testing/Project%204%20-%20Selenium%20Framework%20using%20RICEPOT%20Prompt%20method/target/cucumber-reports/cucumber.html)
 
-> **💡 Note:** GitHub does not render HTML files directly (it shows raw code or a "too big" error). To view the formatted report, use the **Online View** link above or right-click the file `reports/cucumber.html` in your project explorer and select **"Open in Browser"**.
+> **💡 Note:** To view the formatted report, click the links above or right-click the file `target/cucumber-reports/cucumber.html` in your project explorer and select **"Open in Browser"**.
 
 ### Screenshots
 | Login Elements Verification | Invalid Login Error Validation |
